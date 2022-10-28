@@ -1,0 +1,22 @@
+*{
+    font-family: "Century Gothic";
+}
+
+#title{
+    text-align: center;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+button{
+    width: 10em;
+    height: 10em;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
