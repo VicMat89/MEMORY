@@ -1,22 +1,41 @@
-*{
+* {
     font-family: "Century Gothic";
 }
 
-#title{
+#title {
     text-align: center;
 }
 
-#container{
+#container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
-button{
+button {
     width: 10em;
     height: 10em;
-    margin: 5px;
+    margin: 8px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+img {
+    width: 5em;
+}
+
+.pika {
+    width: 3em;
+}
+
+.gengar,
+.Bulbasaur,
+.snorlax {
+    width: 4em;
+}
+
+
+.Gyarados {
+    width: 3.5em;
 }
