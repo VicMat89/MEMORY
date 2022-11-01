@@ -21,21 +21,32 @@ button {
     cursor: pointer;
 }
 
+.squirtle {
+    width: 5.5em;
+}
+
 img {
     width: 5em;
 }
 
-.pika {
-    width: 3em;
+.charmander,
+.snorlax,
+.shaymin {
+    width: 4.5em;
+
 }
 
 .gengar,
-.Bulbasaur,
-.snorlax {
+.Bulbasaur {
     width: 4em;
 }
 
 
 .Gyarados {
     width: 3.5em;
+}
+
+
+.pika {
+    width: 3em;
 }
