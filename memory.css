@@ -1,6 +1,10 @@
 * {
     font-family: "Century Gothic";
 }
+body{
+    background: radial-gradient(circle, rgb(0, 225, 255) 0%,rgb(255, 176, 234)100%);
+
+}
 
 #title {
     text-align: center;
@@ -19,6 +23,7 @@ button {
     margin: 8px;
     border-radius: 10px;
     cursor: pointer;
+    background-color: rgba(169, 255, 226, 0.908);
 }
 
 .squirtle {
