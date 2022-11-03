@@ -1,20 +1,35 @@
 * {
     font-family: "Century Gothic";
 }
-body{
-    background: radial-gradient(circle, rgb(0, 225, 255) 0%,rgb(255, 176, 234)100%);
+
+body {
+    background: rgb(238, 236, 174);
+    background: radial-gradient(circle, rgba(238, 236, 174, 1) 0%, rgba(148, 233, 211, 1) 100%);
+    margin: 30px;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
 
 }
 
-#title {
+h1 {
     text-align: center;
 }
 
-#container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#sectionPlayerOne {
 
+    width: 100%;
+}
+
+#sectionPlayerTwo {
+    width: 100%;
+}
+
+#game {
+    width: 100%;
 }
 
 button {
@@ -22,8 +37,10 @@ button {
     height: 10em;
     margin: 8px;
     border-radius: 10px;
+}
+
+button:hover {
     cursor: pointer;
-    background-color: rgba(169, 255, 226, 0.908);
 }
 
 .squirtle {
@@ -54,4 +71,12 @@ img {
 
 .pika {
     width: 3em;
+}
+#falseButton{
+    flex-direction: row;
+    visibility: hidden;
+}
+
+img{
+    visibility: none;
 }
