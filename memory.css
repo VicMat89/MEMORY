@@ -19,22 +19,10 @@ h1 {
     text-align: center;
 }
 
-#sectionPlayerOne {
-
-    width: 100%;
-}
-
-#sectionPlayerTwo {
-    width: 100%;
-}
-
-#game {
-    width: 100%;
-}
 
 button {
-    width: 10em;
-    height: 10em;
+    width: 100px;
+    height: 100px;
     margin: 8px;
     border-radius: 10px;
 }
@@ -42,33 +30,8 @@ button {
 button:hover {
     cursor: pointer;
 }
-
-.squirtle {
-    width: 5.5em;
-}
-
-img {
-    width: 5em;
-}
-
-.charmander,
-.snorlax,
-.shaymin {
-    width: 4.5em;
-
-}
-
-.gengar,
-.Bulbasaur {
-    width: 4em;
+img{
+    width:80%;
 }
 
 
-.Gyarados {
-    width: 3.5em;
-}
-
-
-.pika {
-    width: 3em;
-}

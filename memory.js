@@ -2,24 +2,28 @@
 let flippedCard = 0;
 let cardOne;
 let cardTwo;
-//let images[]
-let playerOne = "";
-let playerTwo = "";
-let currentPlayer = playerOne;
+let playerOne;
+let playerTwo;
 let firstResult;
 let secondResult;
 let countP1 = 0;
 let countP2 = 0;
 let showCount1;
 let showCount2;
+let currentPlayer;
+let images = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10]
+images = images.sort(() => { return Math.random() - 0.6 });
+console.log(images);
+
 
 //Función de empezar partida:
 
-function startButton() {
+function startButton() { //de momento esto funciona
     playerOne = document.getElementById("player1Name").value;
     playerTwo = document.getElementById('player2Name').value;
-    document.getElementById("player1Name").disabled=true;
-    document.getElementById("player2Name").disabled=true;
+    document.getElementById("player1Name").disabled = true;
+    document.getElementById("player2Name").disabled = true;
+    let currentPlayer = document.getElementById("player1Name").value;
     console.log(playerOne);
     console.log(playerTwo);
 }
@@ -27,20 +31,25 @@ function startButton() {
 
 function flipCard(id) {
     flippedCard++;
-    if (flippedCard == 1) {
-        cardOne = document.getElementById(id);
+    let currentPlayer = playerOne;
+
+
+    if (flippedCard == 1) {//para guardar el valor de cardOne
+        let cardOne = document.getElementById(id);
         //preguntar cómo hacer esto cardOne.innerHTML= images[id];
-        firstResult = image[id];
-        cardOne.innerHTML = firstResult;
+        firstResult = images[id];
+        cardOne.innerHTML = `<img src="./images/${firstResult}.png" alt="">`;
         //Bloquear la primera carta
         cardOne.disabled = true;
+
     }
-    if (flippedCard == 2) {
+    if (flippedCard == 1) { //Para guardar el valor de carTwo
         cardTwo = document.getElementById(id);
         secondResult = images[id];
-        cardTwo = secondResult;
+        cardTwo = `<img src="./images/${secondResult}.png" alt="">`;
         //bloqueamos la segunda carta
         cardTwo.disabled = true;
+        flippedCard++;
     }
 
     if (firstResult == secondResult) {
@@ -48,28 +57,28 @@ function flipCard(id) {
         if (currentPlayer == playerOne) {
             flippedCard = 0;
             countP1++;
-            showCount1.innerHTML = `Llevas ${countP1}`;
+            let showCount1 = document.getElementById('countPlayer1');
+            showCount1.innerHTML = `Llevas ${countP1} puntos`;
         }
         //Suma de puntos al jugador 2 si acierta
         if (currentPlayer == playerTwo) {
             flippedCard = 0;
             countP2++;
-            showCount2.innerHTML = `Llevas ${countP2}`;
+            showCount2.innerHTML = `Llevas ${countP2} puntos`;
         }
         //Comprobamos los marcadores de ambos para ver en qué momento se acaba el juego
         if (countP1 + countP2 == 10) {
             if (countP1 > countP2) {
-                alert(`Fin de la partida, gana ${playerOne} con ${countP1} `)
+                alert(`Fin de la partida, gana ${playerOne} con ${countP1} puntos `)
                 showCount1 = `Has ganado con ${countP1}`;
-                showCount2 = `Has perdido por ${countP1 - countP2} aciertos`;
+                showCount2 = `Has perdido por ${countP1 - countP2} puntos`;
             } else if (countP1 < countP2) {
                 alert(`Fin de la partida, gana ${playerTwo} con ${countP2} `)
                 showCount2 = `Has ganado con ${countP2}`;
-                showCount1 = `Has perdido por ${countP2 - countP1} aciertos`;
+                showCount1 = `Has perdido por ${countP2 - countP1} puntos`;
             } else {
-                showCount1.inn
                 alert(`Fin de la partida, habéis empatado`)
-                erHTML = 'Empate con el otro jugador';
+                showCount1.innerHTML = 'Empate con el otro jugador';
                 showCount2.innerHTML = 'Empate con el otro jugador';
             }
         }
