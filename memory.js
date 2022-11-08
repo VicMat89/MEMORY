@@ -1,4 +1,3 @@
-
 let flippedCard = 0;
 let images = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10]
 images = images.sort(() => { return Math.random() - 0.6 });
@@ -13,31 +12,26 @@ let currentPlayer;
 let showCount1 = document.getElementById("countP1");
 
 
-
 function startButton() { //de momento esto funciona
 
     playerOne = document.getElementById("player1Name").value;
     playerTwo = document.getElementById('player2Name').value;
-
     currentPlayer = document.getElementById("player1Name").value;
-
     console.log(playerOne);
     console.log(playerTwo);
 
     if (playerOne == "" || playerTwo == "") {
         alert("El nombre de los jugadores no puede estar vacío")
-        return false;
-
-
+        return false
     }
-    playerOne = document.getElementById("player1Name").value;
-    playerTwo = document.getElementById('player2Name').value;
-    document.getElementById("player1Name").disabled = true;
-    document.getElementById("player2Name").disabled = true;
-    
-
-
-
+    if (playerOne == playerTwo) {
+        alert("El nombre de los jugadores no puede ser el mismo");
+    }
+    else {
+        document.getElementById("player1Name").disabled = true;
+        document.getElementById("player2Name").disabled = true;
+        document.getElementById("game").style.visibility = "";
+    }
 }
 
 
@@ -102,22 +96,7 @@ f
 
 /*
  
-if (firstResult == secondResult) {
-    //Suma de puntos al jugador 1 si acierta
-    //if (currentPlayer == playerOne) {
-        flippedCard = 0;
-        countP1++;
-       // let showPoint1 = document.getElementById("countPlayer1").value;
-        document.getElementById("countPlayer1").value = `Llevas ${countP1} punto`;
-    //}
-    //Suma de puntos al jugador 2 si acierta
-   /* if (currentPlayer == playerTwo) {
-        flippedCard = 0;
-        countP2++;
-        let showPoint2 = document.getElementById("countPlayer2").value;
-        document.getElementById("countPlayer2").value = `Llevas ${countP2} punto`;
- 
-    }
+
     //Comprobamos los marcadores de ambos para ver en qué momento se acaba el juego
     if (countP1 + countP2 == 10) {
         if (countP1 > countP2) {
