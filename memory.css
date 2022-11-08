@@ -2,6 +2,11 @@
     font-family: "Century Gothic";
 }
 
+.tittle {
+    text-shadow: 3px 4px palevioletred;
+    font-size: 40px;
+}
+
 body {
     background: rgb(238, 236, 174);
     background: radial-gradient(circle, rgba(238, 236, 174, 1) 0%, rgba(148, 233, 211, 1) 100%);
@@ -30,8 +35,7 @@ button {
 button:hover {
     cursor: pointer;
 }
-img{
-    width:80%;
+
+img {
+    width: 80%;
 }
-
-
