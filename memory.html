@@ -17,7 +17,7 @@
             <br />
             <input type="text" id="player1Name">
             <br />
-            <p id="countP1">Aciertos: </p><input type="text" id="countPlayer1" disabled>
+            <p id="countP1">Aciertos: 0</p>
             <br />
             <button id="start" onclick="startButton()">Empezar partida</button>
 
@@ -26,35 +26,36 @@
             <h1 id="title">MEMORY</h1>
 
             <div>
-                <button id="0" onclick="flipCard(0)"></button>
-                <button id="2" onclick="flipCard(2)"></button>
-                <button id="3" onclick="flipCard(3)"></button>
-                <button id="4" onclick="flipCard(4)"></button>
-                <button id="5" onclick="flipCard(5)"></button>
+                <button id="0" class="btn" onclick="flipCard(0)" disabled></button>
+                <button id="1" class="btn" onclick="flipCard(1)" disabled></button>
+                <button id="2" class="btn" onclick="flipCard(2)" disabled></button>
+                <button id="3" class="btn" onclick="flipCard(3)" disabled></button>
+                <button id="4" class="btn" onclick="flipCard(4)" disabled></button>
+
+            </div>
+
+            <div>
+                <button id="5" class="btn" onclick="flipCard(5)" disabled></button>
+                <button id="6" class="btn" onclick="flipCard(6)" disabled></button>
+                <button id="7" class="btn" onclick="flipCard(7)" disabled></button>
+                <button id="8" class="btn" onclick="flipCard(8)" disabled></button>
+                <button id="9" class="btn" onclick="flipCard(9)" disabled></button>
 
             </div>
             <div>
-                <button id="6" onclick="flipCard(6)"></button>
-                <button id="7" onclick="flipCard(7)"></button>
-                <button id="8" onclick="flipCard(8)"></button>
-                <button id="9" onclick="flipCard(9)"></button>
-                <button id="10" onclick="flipCard(10)"></button>
+                <button id="10" class="btn" onclick="flipCard(10)" disabled></button>
+                <button id="11" class="btn" onclick="flipCard(11)" disabled></button>
+                <button id="12" class="btn" onclick="flipCard(12)" disabled></button>
+                <button id="13" class="btn" onclick="flipCard(13)" disabled></button>
+                <button id="14" class="btn" onclick="flipCard(14)" disabled></button>
 
             </div>
             <div>
-                <button id="11" onclick="flipCard(11)"></button>
-                <button id="12" onclick="flipCard(12)"></button>
-                <button id="13" onclick="flipCard(13)"></button>
-                <button id="14" onclick="flipCard(14)"></button>
-                <button id="15" onclick="flipCard(15)"></button>
-
-            </div>
-            <div>
-                <button id="16" onclick="flipCard(16)"></button>
-                <button id="17" onclick="flipCard(17)"></button>
-                <button id="18" onclick="flipCard(18)"></button>
-                <button id="19" onclick="flipCard(19)"></button>
-                <button id="1" onclick="flipCard(1)"></button>
+                <button id="15" class="btn" onclick="flipCard(15)" disabled></button>
+                <button id="16" class="btn" onclick="flipCard(16)" disabled></button>
+                <button id="17" class="btn" onclick="flipCard(17)" disabled></button>
+                <button id="18" class="btn" onclick="flipCard(18)" disabled></button>
+                <button id="19" class="btn" onclick="flipCard(19)" disabled></button>
             </div>
 
 
@@ -64,7 +65,7 @@
             <p id="p2">Jugador 2: </p>
             <br />
             <input type="text" id="player2Name">
-            <p id="countP2">Aciertos: </p><input type="text" id="countPlayer2" disabled>
+            <p id="countP2">Aciertos: 0</p>
             <br />
             <button id="restart" onclick="location.reload()">Reiniciar partida</button>
 
