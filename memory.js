@@ -83,17 +83,6 @@ function flipCard(id) {
     }
 
 }
-//Función de empezar partida:
-/*
-f
-//función validar nombres
-
-*/
-
-
-
-
-
 /*
  
 
@@ -113,27 +102,5 @@ f
             showCount2.innerHTML = 'Empate con el otro jugador';
         }
     }*//*
-if (firstResult !== secondResult) {
-
-
-setTimeout(() => {//Esta función lo que hace es que muestra durante un tiempo X el contenido
-cardOne.innerHTML = " ";
-cardTwo.innerHTML = " ";
-cardOne.disabled = false;
-cardTwo.disabled = false;
-flippedCard = 0; //Esto hace que se puedan volver a seleccionar las cartas
-}, 800)
-// playerTwo = document.getElementById('player2Name').value;
-//currentPlayer = playerTwo;//Cambio de jugador actual a jugador 2.
-}/*
-if (currentPlayer == playerTwo) {
-setTimeout(() => {
-cardOne.innerHTML = " ";
-cardTwo.innerHTML = " ";
-cardOne.disabled = false;
-cardTwo.disabled = false;
-flippedCard = 0;
-}, 800)
-currentPlayer = playerOne; //Cambio del jugador actual al jugador 1
-}*/
+*/
 
