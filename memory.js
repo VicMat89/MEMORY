@@ -1,15 +1,16 @@
 let flippedCard = 0;
 let images = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10]
-images = images.sort(() => { return Math.random() - 0.6 });
-console.log(images);
-let playerOne;
-let playerTwo;
-let firstResult = null;
-let secondResult = null;
+//images = images.sort(() => { return Math.random() - 0.6 });
+let playerOne = document.getElementById("player1Name").value;
+let playerTwo = document.getElementById("player2Name").value;
+let currentPlayer;
+let firstResult;
+let secondResult;
 let countP1 = 0;
 let countP2 = 0;
-let currentPlayer;
 let showCount1 = document.getElementById("countP1");
+let showCount2 = document.getElementById("countP2");
+
 
 
 function startButton() { //de momento esto funciona
@@ -59,48 +60,59 @@ function flipCard(id) {
 
         if (firstResult == secondResult) {
             flippedCard = 0;
-            countP1++;
-            showCount1.innerHTML = `Llevas ${countP1} puntos`;
+            console.log(currentPlayer, playerOne, playerTwo)
+            if (currentPlayer == playerOne) {
+                countP1++;
+                showCount1.innerHTML = `Llevas ${countP1} puntos`;
 
+            } else if (currentPlayer == playerTwo) {
+                countP2++;
+                showCount2.innerHTML = `Llevas ${countP2} puntos`;
+            }
         } else {
             //mostrar durante un rato las cartas
-            setTimeout(() => {
-                cardOne = document.getElementById(firstId);
-                cardTwo = document.getElementById(secondId);
-                cardOne.innerHTML = ' ';
-                cardTwo.innerHTML = ' ';
-                cardOne.disabled = false;
-                cardTwo.disabled = false
-                flippedCard = 0
+            if (currentPlayer == playerOne) {
+                setTimeout(() => {
+                    cardOne = document.getElementById(firstId);
+                    cardTwo = document.getElementById(secondId);
+                    cardOne.innerHTML = ' ';
+                    cardTwo.innerHTML = ' ';
+                    cardOne.disabled = false;
+                    cardTwo.disabled = false;
+                    flippedCard = 0;
 
-            }, 800)
+                }, 800)
+                currentPlayer = playerTwo;
+
+            } else if (currentPlayer == playerTwo) {
+                setTimeout(() => {
+                    cardOne = document.getElementById(firstId);
+                    cardTwo = document.getElementById(secondId);
+                    cardOne.innerHTML = ' ';
+                    cardTwo.innerHTML = ' ';
+                    cardOne.disabled = false;
+                    cardTwo.disabled = false;
+                    flippedCard = 0;
+                }, 800)
+                currentPlayer = playerOne;
+            }
+
+
         }
     }
 
-    if (countP1 == 10) {
-        alert(`Fin de la partida, has ganado`);
-
-    }
-
-}
-/*
- 
-
-    //Comprobamos los marcadores de ambos para ver en qué momento se acaba el juego
     if (countP1 + countP2 == 10) {
         if (countP1 > countP2) {
-            alert(`Fin de la partida, gana ${playerOne} con ${countP1} puntos `)
-            showCount1 = `Has ganado con ${countP1}`;
-            showCount2 = `Has perdido por ${countP1 - countP2} puntos`;
+            alert(`Fin de la partida, gana ${playerOne} con ${countP1} puntos `);
+            
         } else if (countP1 < countP2) {
-            alert(`Fin de la partida, gana ${playerTwo} con ${countP2} `)
-            showCount2 = `Has ganado con ${countP2}`;
-            showCount1 = `Has perdido por ${countP2 - countP1} puntos`;
+            alert(`Fin de la partida, gana ${playerTwo} con ${countP2} puntos `);
+            
         } else {
-            alert(`Fin de la partida, habéis empatado`)
-            showCount1.innerHTML = 'Empate con el otro jugador';
-            showCount2.innerHTML = 'Empate con el otro jugador';
+            alert(`Fin de la partida, habéis empatado`);
+            
         }
-    }*//*
-*/
+    }
+}
+
 
