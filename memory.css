@@ -6,6 +6,10 @@
     text-shadow: 3px 4px palevioletred;
     font-size: 40px;
 }
+#turn{
+    text-align: center;
+    font-size: 16px;
+}
 
 body {
     background: rgb(238, 236, 174);
